@@ -1,0 +1,59 @@
+/* Fondo animado moderno */
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.text-shadow-dark {
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-light-emphasis {
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Sección principal tipo Hero */
+.hero {
+    height: 60vh;
+    background: url('imagen-empresa.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+/* Tarjeta estilo glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.hero-card {
+    max-width: 700px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Animación de aparición */
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
